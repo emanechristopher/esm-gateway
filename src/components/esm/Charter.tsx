@@ -10,34 +10,22 @@ const values = [
 
 export function Charter() {
   return (
-    <section id="charter" className="py-24 lg:py-32 border-t border-border">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-        <div className="grid lg:grid-cols-12 gap-10 mb-16">
-          <div className="lg:col-span-6">
-            <span className="text-xs tracking-[0.3em] uppercase text-accent font-medium">Charte / 05</span>
-            <h2 className="mt-6 font-display text-5xl md:text-6xl lg:text-7xl text-primary-deep">
-              cinq
-              <br />
-              <span className="text-accent">engagements</span>
-              <br />
-              non négociables
-            </h2>
-          </div>
-          <p className="lg:col-span-5 lg:col-start-8 lg:pt-4 text-lg text-foreground/75 leading-relaxed">
-            Nos valeurs ne sont pas un décor. Elles guident chaque décision médicale, logistique
-            et humaine que nous prenons pour vous.
-          </p>
+    <section id="charter" className="py-24 lg:py-32">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="text-center max-w-2xl mx-auto">
+          <span className="text-xs tracking-[0.25em] uppercase text-accent font-medium">Charte éthique</span>
+          <h2 className="mt-4 font-display text-4xl md:text-5xl text-primary-deep leading-tight">
+            Cinq engagements qui guident chaque décision.
+          </h2>
         </div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-px bg-border border border-border">
-          {values.map((v, i) => (
-            <div key={v.title} className="bg-background p-8 group hover:bg-accent transition-colors">
-              <div className="flex items-center justify-between mb-8">
-                <span className="font-mono text-[10px] tracking-widest text-muted-foreground group-hover:text-accent-foreground/70">0{i + 1}</span>
-                <v.icon size={22} strokeWidth={1.5} className="text-primary group-hover:text-accent-foreground" />
+        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+          {values.map((v) => (
+            <div key={v.title} className="bg-card rounded-2xl p-7 border border-border/60 shadow-[var(--shadow-card)] hover:border-primary/40 transition-colors">
+              <div className="h-11 w-11 rounded-full bg-primary-soft flex items-center justify-center text-primary mb-5">
+                <v.icon size={20} strokeWidth={1.6} />
               </div>
-              <h3 className="font-display text-2xl text-primary-deep group-hover:text-accent-foreground leading-tight">{v.title.toUpperCase()}</h3>
-              <p className="mt-3 text-sm text-foreground/70 group-hover:text-accent-foreground/90 leading-relaxed">{v.desc}</p>
+              <h3 className="font-display text-xl text-primary-deep">{v.title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{v.desc}</p>
             </div>
           ))}
         </div>

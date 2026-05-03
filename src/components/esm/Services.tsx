@@ -10,45 +10,28 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-24 lg:py-32 bg-primary-deep text-primary-foreground">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-        <div className="grid lg:grid-cols-12 gap-10 mb-20">
-          <div className="lg:col-span-5">
-            <span className="text-xs tracking-[0.3em] uppercase text-accent font-medium">Services / 02</span>
-            <h2 className="mt-6 font-display text-5xl md:text-6xl lg:text-7xl">
-              un parcours
-              <br />
-              <span className="text-accent">intégral</span>
-            </h2>
-          </div>
-          <p className="lg:col-span-6 lg:col-start-7 text-lg leading-relaxed text-primary-foreground/80 lg:pt-4">
-            Cinq étapes pensées comme un seul mouvement. Chacune confiée à des spécialistes,
-            chacune coordonnée par un référent unique pour garantir cohérence et tranquillité.
-          </p>
+    <section id="services" className="py-24 lg:py-32 bg-secondary/40">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="max-w-2xl">
+          <span className="text-xs tracking-[0.25em] uppercase text-accent font-medium">Nos services</span>
+          <h2 className="mt-4 font-display text-4xl md:text-5xl text-primary-deep leading-tight">
+            Un accompagnement intégral, pensé pour votre tranquillité.
+          </h2>
         </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-primary-foreground/10">
+        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((s, i) => (
             <article
               key={s.title}
-              className="group bg-primary-deep p-10 hover:bg-primary transition-colors relative"
+              className="group relative bg-card rounded-2xl p-8 border border-border/60 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] hover:-translate-y-1 transition-all"
             >
-              <span className="absolute top-6 right-6 font-mono text-xs text-primary-foreground/40">0{i + 1} / 05</span>
-              <s.icon size={36} strokeWidth={1.4} className="text-accent" />
-              <h3 className="mt-8 font-display text-3xl leading-tight">{s.title.toUpperCase()}</h3>
-              <p className="mt-4 text-primary-foreground/75 leading-relaxed">{s.desc}</p>
+              <div className="h-12 w-12 rounded-xl bg-primary-soft flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                <s.icon size={22} strokeWidth={1.6} />
+              </div>
+              <h3 className="font-display text-2xl text-primary-deep">{s.title}</h3>
+              <p className="mt-3 text-muted-foreground leading-relaxed">{s.desc}</p>
+              <span className="absolute top-6 right-6 text-xs text-muted-foreground/60 font-mono">0{i + 1}</span>
             </article>
           ))}
-          <article className="bg-accent p-10 flex flex-col justify-between">
-            <h3 className="font-display text-3xl text-accent-foreground leading-tight">
-              UN BESOIN
-              <br />
-              SPÉCIFIQUE ?
-            </h3>
-            <a href="#contact" className="mt-6 font-display tracking-wider text-sm text-accent-foreground border-b-2 border-accent-foreground self-start pb-1">
-              PARLEZ-NOUS →
-            </a>
-          </article>
         </div>
       </div>
     </section>

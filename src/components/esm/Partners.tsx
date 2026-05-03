@@ -6,35 +6,25 @@ const partners = [
 
 export function Partners() {
   return (
-    <section id="partners" className="py-24 lg:py-32 border-t border-border">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-        <div className="grid lg:grid-cols-12 gap-10 mb-16">
-          <div className="lg:col-span-7">
-            <span className="text-xs tracking-[0.3em] uppercase text-accent font-medium">Partenaires / 03</span>
-            <h2 className="mt-6 font-display text-5xl md:text-6xl lg:text-7xl text-primary-deep">
-              un réseau
-              <br />
-              <span className="text-accent">d'excellence</span>,
-              <br />
-              choisi avec
-              <br />
-              <span className="text-primary">exigence</span>
-            </h2>
-          </div>
-          <p className="lg:col-span-4 lg:col-start-9 lg:pt-4 text-lg text-foreground/75 leading-relaxed">
-            Nous collaborons avec des institutions reconnues internationalement pour leur expertise
-            clinique, leur plateau technique et leur éthique de soin.
+    <section id="partners" className="py-24 lg:py-32">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="text-center max-w-2xl mx-auto">
+          <span className="text-xs tracking-[0.25em] uppercase text-accent font-medium">Hôpitaux partenaires</span>
+          <h2 className="mt-4 font-display text-4xl md:text-5xl text-primary-deep leading-tight">
+            Un réseau d'excellence, sélectionné avec exigence.
+          </h2>
+          <p className="mt-5 text-muted-foreground">
+            Nous collaborons avec les institutions les plus reconnues de Turquie et au-delà,
+            chacune choisie pour son expertise et son éthique.
           </p>
         </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-border border border-border">
-          {partners.map((p, i) => (
+        <div className="mt-14 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-px bg-border/70 rounded-2xl overflow-hidden border border-border/70 shadow-[var(--shadow-card)]">
+          {partners.map((p) => (
             <div
               key={p}
-              className="bg-background px-6 py-12 flex flex-col items-start gap-3 hover:bg-primary-soft transition-colors"
+              className="bg-card px-6 py-10 flex items-center justify-center text-center font-display text-xl text-primary-deep hover:bg-primary-soft transition-colors"
             >
-              <span className="font-mono text-[10px] tracking-widest text-muted-foreground">0{i + 1}</span>
-              <span className="font-display text-2xl md:text-3xl text-primary-deep leading-tight">{p.toUpperCase()}</span>
+              {p}
             </div>
           ))}
         </div>
