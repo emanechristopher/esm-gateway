@@ -1,18 +1,25 @@
+import caseDoctor from "@/assets/case-doctor.jpg";
+import caseCare from "@/assets/case-care.jpg";
+import caseIstanbul from "@/assets/case-istanbul.jpg";
+
 const cases = [
   {
     tag: "Neurochirurgie",
     title: "Une patiente opérée d'une tumeur cérébrale complexe",
     desc: "Prise en charge en moins de trois semaines, intervention réalisée à Istanbul, retour autonome au domicile après quatre semaines de convalescence accompagnée.",
+    img: caseDoctor,
   },
   {
     tag: "Cardiologie pédiatrique",
     title: "Un enfant opéré d'une malformation cardiaque congénitale",
     desc: "Coordination entre l'équipe pédiatrique gabonaise et le service cardiothoracique partenaire. Famille hébergée et soutenue durant toute l'hospitalisation.",
+    img: caseCare,
   },
   {
     tag: "Ophtalmologie",
     title: "Greffe de cornée et restauration de la vision",
     desc: "Bilan préopératoire à distance, greffe réussie en Turquie, suivi ophtalmologique mensuel sur dix-huit mois après le retour au pays.",
+    img: caseIstanbul,
   },
 ];
 
@@ -33,7 +40,19 @@ export function CaseStudies() {
         </div>
         <div className="grid lg:grid-cols-3 gap-6">
           {cases.map((c, i) => (
-            <article key={c.title} className="bg-card rounded-2xl p-8 border border-border/60 shadow-[var(--shadow-card)] flex flex-col">
+            <article key={c.title} className="bg-card rounded-2xl border border-border/60 shadow-[var(--shadow-card)] flex flex-col overflow-hidden hover:shadow-[var(--shadow-elegant)] hover:-translate-y-1 transition-all">
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={c.img}
+                  alt={c.title}
+                  width={1024}
+                  height={1024}
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-deep/50 to-transparent" />
+              </div>
+              <div className="p-8 flex flex-col flex-1">
               <div className="flex items-center justify-between">
                 <span className="text-[11px] tracking-[0.22em] uppercase text-accent font-medium px-3 py-1 rounded-full bg-accent-soft">
                   {c.tag}
@@ -44,6 +63,7 @@ export function CaseStudies() {
               <p className="mt-4 text-muted-foreground leading-relaxed flex-1">{c.desc}</p>
               <div className="mt-6 pt-6 border-t border-border/60 text-sm text-primary font-medium">
                 Mission accomplie ✦
+              </div>
               </div>
             </article>
           ))}

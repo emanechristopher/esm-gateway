@@ -1,10 +1,12 @@
+import logo from "@/assets/logo-esm.jpg";
+
 export function Footer() {
   return (
     <footer className="border-t border-border/60 bg-card">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-12 grid md:grid-cols-3 gap-8 items-start">
         <div>
           <div className="flex items-center gap-3">
-            <span className="h-9 w-9 rounded-full bg-[image:var(--gradient-primary)] flex items-center justify-center text-primary-foreground font-display text-lg">É</span>
+            <img src={logo} alt="Logo ESM" width={44} height={44} loading="lazy" className="h-11 w-11 rounded-full object-cover" />
             <div className="leading-tight">
               <div className="font-display text-lg text-primary-deep">Éclat Solutions Médical</div>
               <div className="text-[10px] tracking-[0.25em] uppercase text-muted-foreground">Assistance médicale internationale</div>
