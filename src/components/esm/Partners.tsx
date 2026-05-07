@@ -1,3 +1,6 @@
+import medipolTower from "@/assets/partner-medipol-tower.jpg";
+import medipol from "@/assets/partner-medipol.jpg";
+
 const partners = [
   "LIV Hospital", "Medipol Mega", "Biruni Hospital",
   "Medical Park", "Hisar Hospital", "Medicana",
@@ -18,7 +21,25 @@ export function Partners() {
             chacune choisie pour son expertise et son éthique.
           </p>
         </div>
-        <div className="mt-14 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-px bg-border/70 rounded-2xl overflow-hidden border border-border/70 shadow-[var(--shadow-card)]">
+        <div className="mt-14 grid md:grid-cols-2 gap-6">
+          <div className="relative rounded-3xl overflow-hidden border border-border/60 shadow-[var(--shadow-card)] h-72">
+            <img src={medipol} alt="Façade de l'hôpital Medipol à Istanbul" className="w-full h-full object-cover" loading="lazy" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary-deep/70 to-transparent" />
+            <div className="absolute bottom-5 left-6 text-primary-foreground">
+              <div className="text-[11px] tracking-[0.22em] uppercase opacity-80">Istanbul</div>
+              <div className="font-display text-2xl">Medipol Mega</div>
+            </div>
+          </div>
+          <div className="relative rounded-3xl overflow-hidden border border-border/60 shadow-[var(--shadow-card)] h-72">
+            <img src={medipolTower} alt="Tour Medipol à Istanbul" className="w-full h-full object-cover" loading="lazy" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary-deep/70 to-transparent" />
+            <div className="absolute bottom-5 left-6 text-primary-foreground">
+              <div className="text-[11px] tracking-[0.22em] uppercase opacity-80">Istanbul</div>
+              <div className="font-display text-2xl">Medipol Tower</div>
+            </div>
+          </div>
+        </div>
+        <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-px bg-border/70 rounded-2xl overflow-hidden border border-border/70 shadow-[var(--shadow-card)]">
           {partners.map((p) => (
             <div
               key={p}
