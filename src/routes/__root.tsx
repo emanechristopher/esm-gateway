@@ -32,11 +32,15 @@ export const Route = createRootRoute({
       { title: "Éclat Solutions Médical — Assistance médicale internationale" },
       { name: "description", content: "ESM accompagne les patients africains vers les meilleurs hôpitaux internationaux. Suivi médical de haute définition, sans stress." },
       { name: "author", content: "Éclat Solutions Médical" },
-      { property: "og:title", content: "Éclat Solutions Médical (ESM)" },
-      { property: "og:description", content: "Votre santé à l'international, sans stress ni mauvaises surprises." },
+      { property: "og:title", content: "Éclat Solutions Médical — Assistance médicale internationale" },
+      { property: "og:description", content: "ESM accompagne les patients africains vers les meilleurs hôpitaux internationaux. Suivi médical de haute définition, sans stress." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Éclat Solutions Médical — Assistance médicale internationale" },
+      { name: "twitter:description", content: "ESM accompagne les patients africains vers les meilleurs hôpitaux internationaux. Suivi médical de haute définition, sans stress." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/kszVfAQz3IT5gOSSoJeaOfGUux53/social-images/social-1780312965851-logo.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/kszVfAQz3IT5gOSSoJeaOfGUux53/social-images/social-1780312965851-logo.webp" },
     ],
     links: [
       {
