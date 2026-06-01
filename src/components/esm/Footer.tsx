@@ -13,7 +13,9 @@ export function Footer() {
             </div>
           </div>
           <p className="mt-5 text-sm text-muted-foreground max-w-xs leading-relaxed">
-            Un accompagnement médical exigeant, du Gabon vers les meilleurs hôpitaux du monde.
+            Un accompagnement médical exigeant, du Gabon vers les meilleurs hôpitaux de Turquie,
+            du Maroc et de France.
+
           </p>
         </div>
         <div className="text-sm text-muted-foreground space-y-2">

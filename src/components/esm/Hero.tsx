@@ -44,10 +44,11 @@ export function Hero() {
 
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
           {[
-            { k: "6+", v: "Pays partenaires" },
-            { k: "20+", v: "Hôpitaux référents" },
+            { k: "3", v: "Pays partenaires" },
+            { k: "9+", v: "Hôpitaux référents" },
             { k: "100%", v: "Suivi personnalisé" },
             { k: "24/7", v: "Coordination dédiée" },
+
           ].map((s) => (
             <div key={s.v} className="text-center">
               <div className="font-display text-3xl md:text-4xl text-primary-deep">{s.k}</div>
