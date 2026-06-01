@@ -1,6 +1,6 @@
 import { MapPin, Phone, Globe } from "lucide-react";
 
-const countries = ["Turquie", "Maroc", "France", "États-Unis", "Afrique", "Dubaï"];
+const countries = ["Turquie", "France", "Maroc"];
 
 export function Contact() {
   return (
