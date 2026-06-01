@@ -14,7 +14,8 @@ export function About() {
           <p className="text-lg text-foreground/80 leading-relaxed">
             Nous orchestrons chaque étape du parcours de soin — de l'évaluation du dossier
             à la convalescence — en partenariat avec les meilleurs établissements de Turquie,
-            du Maroc, de France, des États-Unis et de Dubaï.
+            du Maroc et de France.
+
           </p>
           <div className="pt-6 border-t border-border/70 max-w-2xl mx-auto">
             <p className="font-display text-xl text-primary-deep italic">

@@ -17,8 +17,9 @@ export function Partners() {
             Un réseau d'excellence, sélectionné avec exigence.
           </h2>
           <p className="mt-5 text-muted-foreground">
-            Nous collaborons avec les institutions les plus reconnues de Turquie et au-delà,
-            chacune choisie pour son expertise et son éthique.
+            Nous collaborons avec les institutions les plus reconnues de Turquie,
+            du Maroc et de France, chacune choisie pour son expertise et son éthique.
+
           </p>
         </div>
         <div className="mt-14 grid md:grid-cols-2 gap-6">
