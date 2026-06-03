@@ -1,0 +1,61 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+section[id] {
+  scroll-margin-top: 6rem;
+}
+
+:root {
+  --background: oklch(99.5% 0 0);
+  --foreground: oklch(14% 0 0);
+  --card: oklch(100% 0 0);
+  --card-foreground: oklch(14% 0 0);
+  --popover: oklch(100% 0 0);
+  --popover-foreground: oklch(14% 0 0);
+  --primary: oklch(54% 0.156 250);
+  --primary-foreground: oklch(99.5% 0 0);
+  --secondary: oklch(77% 0.108 285);
+  --secondary-foreground: oklch(14% 0 0);
+  --muted: oklch(90% 0 0);
+  --muted-foreground: oklch(45% 0 0);
+  --accent: oklch(60% 0.15 145);
+  --accent-foreground: oklch(14% 0 0);
+  --destructive: oklch(70% 0.15 30);
+  --destructive-foreground: oklch(99.5% 0 0);
+  --border: oklch(90% 0 0);
+  --input: oklch(90% 0 0);
+  --ring: oklch(54% 0.156 250);
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: oklch(14% 0 0);
+  --foreground: oklch(99.5% 0 0);
+  --card: oklch(23% 0 0);
+  --card-foreground: oklch(99.5% 0 0);
+  --popover: oklch(23% 0 0);
+  --popover-foreground: oklch(99.5% 0 0);
+  --primary: oklch(64% 0.156 250);
+  --primary-foreground: oklch(14% 0 0);
+  --secondary: oklch(50% 0.108 285);
+  --secondary-foreground: oklch(99.5% 0 0);
+  --muted: oklch(30% 0 0);
+  --muted-foreground: oklch(70% 0 0);
+  --accent: oklch(70% 0.15 145);
+  --accent-foreground: oklch(14% 0 0);
+  --destructive: oklch(80% 0.15 30);
+  --destructive-foreground: oklch(14% 0 0);
+  --border: oklch(30% 0 0);
+  --input: oklch(30% 0 0);
+  --ring: oklch(64% 0.156 250);
+}

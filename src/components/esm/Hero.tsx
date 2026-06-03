@@ -5,7 +5,7 @@ export function Hero() {
     <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <img
-          src={heroImg}
+          src={heroImg.src}
           alt="Couloir d'hôpital lumineux"
           width={1920}
           height={1280}
@@ -24,8 +24,8 @@ export function Hero() {
           Suivi médical de <span className="italic text-primary">haute définition</span>
         </h1>
         <p className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground leading-relaxed">
-          Votre santé à l'international, sans stress ni mauvaises surprises.
-          ESM vous accompagne, du diagnostic au retour, avec rigueur et humanité.
+          Votre santé à l'international, sans stress ni mauvaises surprises. ESM vous accompagne, du
+          diagnostic au retour, avec rigueur et humanité.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -48,11 +48,12 @@ export function Hero() {
             { k: "9+", v: "Hôpitaux référents" },
             { k: "100%", v: "Suivi personnalisé" },
             { k: "24/7", v: "Coordination dédiée" },
-
           ].map((s) => (
             <div key={s.v} className="text-center">
               <div className="font-display text-3xl md:text-4xl text-primary-deep">{s.k}</div>
-              <div className="mt-1 text-xs uppercase tracking-[0.18em] text-muted-foreground">{s.v}</div>
+              <div className="mt-1 text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                {s.v}
+              </div>
             </div>
           ))}
         </div>

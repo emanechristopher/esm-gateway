@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import Link from "next/link";
 import logo from "@/assets/logo-esm.jpg";
 
 export function Navbar() {
@@ -12,16 +12,26 @@ export function Navbar() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/70 border-b border-border/60">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="Logo Éclat Solutions Médical" width={44} height={44} className="h-11 w-11 rounded-full object-cover shadow-[var(--shadow-soft)]" />
+        <Link href="/" className="flex items-center gap-3">
+          <img
+            src={logo.src}
+            alt="Logo Éclat Solutions Médical"
+            width={44}
+            height={44}
+            className="h-11 w-11 rounded-full object-cover shadow-[var(--shadow-soft)]"
+          />
           <span className="flex flex-col leading-tight">
             <span className="font-display text-lg text-primary-deep">Éclat Solutions</span>
-            <span className="text-[10px] tracking-[0.25em] uppercase text-muted-foreground">Médical · ESM</span>
+            <span className="text-[10px] tracking-[0.25em] uppercase text-muted-foreground">
+              Médical · ESM
+            </span>
           </span>
         </Link>
         <nav className="hidden lg:flex items-center gap-9 text-sm text-foreground/80">
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="hover:text-primary transition-colors">{l.label}</a>
+            <a key={l.href} href={l.href} className="hover:text-primary transition-colors">
+              {l.label}
+            </a>
           ))}
         </nav>
         <a
